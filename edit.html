@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل المقال - لوحة التحكم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-edit"></i> تعديل المقال</h1>
+        <a href="index.html" class="button"><i class="fas fa-arrow-left"></i> العودة للوحة التحكم</a>
+    </header>
+    <div class="container">
+        <main>
+            <section id="edit-article-section">
+                <h2>تعديل بيانات المقال</h2>
+                <form id="edit-article-form">
+                    <input type="hidden" id="articleId">
+                    <div class="form-group">
+                        <label for="title"><i class="fas fa-heading"></i> عنوان المقال:</label>
+                        <input type="text" id="title" placeholder="عنوان المقال" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category"><i class="fas fa-folder-open"></i> نوع المقال:</label>
+                        <input type="text" id="category" placeholder="مثال: تكنولوجيا، أخبار..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content"><i class="fas fa-paragraph"></i> وصف المقال:</label>
+                        <textarea id="content" placeholder="وصف المقال" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl"><i class="fas fa-image"></i> رابط صورة المقال (اختياري):</label>
+                        <input type="url" id="imageUrl" placeholder="https://example.com/image.jpg">
+                        <div id="current-image-container" style="margin-top: 10px;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="link"><i class="fas fa-link"></i> رابط خارجي (اختياري):</label>
+                        <input type="url" id="link" placeholder="https://example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkTitle"><i class="fas fa-tag"></i> عنوان الرابط (اختياري):</label>
+                        <input type="text" id="linkTitle" placeholder="مثال: اقرأ المزيد">
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> حفظ التعديلات</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 لوحة التحكم</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="edit.js"></script>
+</body>
+</html>
